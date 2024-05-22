@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <style>
+    body{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      height: 100vh;
+    }
+
+    img{
+      width: 100vw; 
+      height: 100vh; 
+      object-fit: cover;
+      position: absolute;
+      z-index: -1;
+    }
+
+    a{
+      color: white;
+      text-decoration: none;
+      font-size: 28px;
+    }
+  </style>
+</head>
+
+<body>
+<img id="paisaje1">
+<a href="https://open.spotify.com/intl-es?">BIENVENIDOS</a>
+  <script>
+    let a = ["paisaje2.jpg", "paisaje3.jpg", "paisaje4.jpg","paisaje5.jpg","paisaje6.jpg"]
+    setTimeout(cambiarFoto,3000);
+    function cambiarFoto(){
+      let r = Math.floor(Math.random() * a.length);
+      document.getElementById("paisaje1").src = a[r];
+      setTimeout(cambiarFoto,3000);
+    }
+  </script>
+
+</body>
+
+</html>
